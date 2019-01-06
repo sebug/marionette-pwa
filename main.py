@@ -13,7 +13,7 @@ def navigate(url):
     client.start_session()
     client.navigate(url)
     start_page = InformationPage(client)
-    start_page.print_menu_items()
+    exhibitor_page = start_page.navigate_to_page("Exhibitors")
 
 
 
