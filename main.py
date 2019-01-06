@@ -2,6 +2,8 @@
 
 from marionette_driver.marionette import Marionette
 from pages import InformationPage
+from marionette_driver import Wait
+from marionette_driver import expected
 
 def get_first_url():
     urls = open("urls.txt", "r")
@@ -14,6 +16,10 @@ def navigate(url):
     client.navigate(url)
     start_page = InformationPage(client)
     exhibitor_page = start_page.navigate_to_page("Exhibitors")
+    exhibitor_widget = exhibitor_page.get_exhibitor_widget()
+    exhibitors = exhibitor_widget.get_exhibitors()
+    for exhibitor in exhibitors:
+        print exhibitor
 
 
 

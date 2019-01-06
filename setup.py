@@ -6,5 +6,6 @@ setup(name='marionette-pwa',
       description='Marionetting the PWA',
       author='Sebastian Gfeller',
       author_email='sebastian.gfeller@gmail.com',
-      url='https://github.com/sebug/marionette-pwa')
+      url='https://github.com/sebug/marionette-pwa',
+      install_requires=['marionette-driver'])
 
